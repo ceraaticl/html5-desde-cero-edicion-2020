@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tablas</title>
+
+        <style>
+            table {
+                font-family: sans-serif;
+                border: 2px solid gray;
+                border-collapse: collapse;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            caption {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            th,
+            td {
+                border: 2px solid gray;
+                padding: 5px;
+            }
+
+            tr:nth-child(3) td:nth-child(2) {
+                background-color: lightgreen;
+                letter-spacing: 25px;
+                padding-left: 50px;
+                text-transform: uppercase;
+            }
+
+            td:first-child,
+            th,
+            tfoot {
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 
+            La estructura basica de una tabla se compone de:
+            table -> etiqueta que encierra una tabla
+            tr -> table row, etiqueta que costruye una fila
+            td -> tabla data. etiqueta que construye una celda
+
+            truco: numero de celdas dentro de un tr, establece el numero de columnas en una tabla
+         -->
+
+        <h1>Tabla</h1>
+        <table>
+            <caption>
+                HORARIO
+            </caption>
+            <colgroup>
+                <col colspan="5" />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>L</th>
+                    <th>M</th>
+                    <th>M</th>
+                    <th>J</th>
+                    <th>V</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:30 - 09:30</td>
+                    <td>Mate</td>
+                    <td>Mate</td>
+                    <td>Mate</td>
+                    <td>Mate</td>
+                    <td>Mate</td>
+                </tr>
+                <tr>
+                    <td>10:30 - 11:30</td>
+                    <td>Ingles</td>
+                    <td>Ingles</td>
+                    <td>Ingles</td>
+                    <td>Ingles</td>
+                    <td>Ingles</td>
+                </tr>
+                <tr>
+                    <td>12:30 - 13:30</td>
+                    <td colspan="5">Recreo</td>
+                </tr>
+                <tr>
+                    <td>14:30 - 15:30</td>
+                    <td rowspan="2">Fisica</td>
+                    <td>Fisica</td>
+                    <td>Fisica</td>
+                    <td>Fisica</td>
+                    <td rowspan="2">Fisica</td>
+                </tr>
+                <tr>
+                    <td>16:30 - 17:30</td>
+                    <td>Quimica</td>
+                    <td>Quimica</td>
+                    <td>Quimica</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">Total de asignaturas:</td>
+                    <td>4</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

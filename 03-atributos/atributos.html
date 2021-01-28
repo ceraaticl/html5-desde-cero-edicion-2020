@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Atributos</title>
+
+        <style>
+            .parrafo {
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="parrafo">Clase</p>
+        <p id="id">Identificador</p>
+        <p title="Ceraati">Titulo</p>
+        <p data-ceraati="Leer todos los datos" id="id2">Data</p>
+
+        <script>
+            const id = document.getElementById("id");
+            const data = document.getElementById("id2");
+            console.log(id.textContent);
+            console.log(data.dataset.ceraati);
+        </script>
+    </body>
+</html>
