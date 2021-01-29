@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Selectores</title>
+    </head>
+    <body>
+        <!-- 
+        radio -> permite seleccionar una unica opcion de una lista de opciones relacionadas
+
+        checkbox -> permite seleccionar varias opciones de una lista de opciones relacionadas
+
+        select -> crea una lista de opciones donde podemos seleccionar una o varias opciones
+
+        Si tenemosmuchas opciones podemos ordenarlas por categorias a través de la etiqieta <optgroup> con el atributo label para nombrar la categoría
+     -->
+        <h1>Elementos seleccionables</h1>
+        <form>
+            <h2>Genero</h2>
+            <label>
+                Masculino
+                <input type="radio" name="genero" value="M" checked />
+            </label>
+            <label>
+                Femenino
+                <input type="radio" name="genero" value="F" />
+            </label>
+            <label>
+                Otro
+                <input type="radio" name="genero" value="O" />
+            </label>
+            <hr />
+            <h2>Lenguajes</h2>
+            <label>
+                HTML
+                <input type="checkbox" name="lenguajes" value="html" checked />
+            </label>
+            <label>
+                CSS
+                <input type="checkbox" name="lenguajes" value="css" checked />
+            </label>
+            <label>
+                JS
+                <input type="checkbox" name="lenguajes" value="js" />
+            </label>
+            <hr />
+            <h2>Select basico</h2>
+            <select name="alimentos">
+                <optgroup label="vegetal">
+                    <option value="pan">Pan</option>
+                    <option value="harina">Harina</option>
+                </optgroup>
+
+                <optgroup label="aniaml">
+                    <option value="huevo">Huevo</option>
+                </optgroup>
+            </select>
+            <select name="alimentos-2" multiple>
+                <option value="pan">Pan</option>
+                <option value="harina">Harina</option>
+                <option value="huevo">Huevo</option>
+            </select>
+            <hr />
+            <input type="list" list="alimentos" />
+            <datalist id="alimentos">
+                <option value="pan"></option>
+                <option value="harina"></option>
+                <option value="huevo"></option>
+            </datalist>
+        </form>
+    </body>
+</html>
