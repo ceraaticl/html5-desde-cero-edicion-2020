@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Imagenes</title>
+    </head>
+    <body>
+        <h1>Contenido embebido</h1>
+        <img
+            srcset="
+                /09-contenido-embebido/assets/images/erenjpg.webp,
+                /09-contenido-embebido/assets/images/eren-mobil.jpg 2x
+            "
+            src="/09-contenido-embebido/assets/images/eren.jpg"
+            alt="Eren"
+        />
+        <hr />
+        <picture>
+            <source
+                srcset="/09-contenido-embebido/assets/images/eren-mobil.jpg"
+                media="(max-width:615px)"
+            />
+            <img
+                src="
+                /09-contenido-embebido/assets/images/eren.jpg"
+                alt="Eren"
+            />
+        </picture>
+    </body>
+</html>
